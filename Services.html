@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Lyn's Karate Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS from index.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            padding-top: 80px;
+        }
+
+        /* Navigation */
+                
+                .navbar {
+            background-color: orchid;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 35px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e5f2e9;
+        }
+        
+        .buttons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: orchid;
+            border: 1px solid white;
+        }
+        
+        .btn-white:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .btn-dark {
+            background-color: #000;
+            color: white;
+            border: 1px solid #000;
+        }
+        
+        .btn-dark:hover {
+            background-color: white;
+        }
+        
+        .services-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .services-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .service-card i {
+            font-size: 3rem;
+            color: orchid;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+    
+     <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    
+                </a>
+            </div>
+            <img src="Black.png" alt="Lyn’s Karate Academy" height="80px", width="80px">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./About Us.html">About Us</a></li>
+                <li><a href="./FAQS.html">FAQs</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            
+            <div class="buttons">
+                <a href="Testimonies.html" class="btn btn-white"> Testimonies from Clients of Lyn's Academy</a>
+                <a href="login.html" class="btn btn-dark">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <h1>Our Services</h1>
+            <p>Discover the diverse range of karate training programs we offer at Lyn's Karate Academy.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Toddler Training</h3>
+                    <p>Specialized karate classes for children aged 5 to 10 years, focusing on fun, discipline, and basic motor skills.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Teen Training</h3>
+                    <p>Comprehensive karate training for teenagers aged 11 to 19, emphasizing confidence, self-defense, and personal growth.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-pregnant"></i>
+                    <h3>Pregnancy Fitness</h3>
+                    <p>Gentle karate-inspired fitness programs for pregnant women from 4 to 9 months, promoting health and wellness.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Life Skills Training</h3>
+                    <p>Programs designed to develop essential life skills through martial arts principles and training.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Karate Job Opportunities</h3>
+                    <p>Professional development and career guidance for aspiring martial arts instructors and professionals.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Self-Defense Workshops</h3>
+                    <p>Specialized workshops focusing on practical self-defense techniques for various age groups and skill levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Lyn's Karate Academy</h3>
+                    <p>Lyn's Karate Academy is a unique martial arts training center dedicated to empowering individuals of all ages and abilities through the art of karate.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Other footer columns from index.html -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lyn's Karate Academy. All rights reserved. | <a href="privacy.html" style="color: #e5f2e9;">Privacy Policy</a> | <a href="terms.html" style="color: #e5f2e9;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
