@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: orchid;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 80px;
+            width: 80px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e5f2e9;
+        }
+        
+        .buttons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: orchid;
+            border: 1px solid white;
+        }
+        
+        .btn-white:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .btn-dark {
+            background-color: #000;
+            color: white;
+            border: 1px solid #000;
+        }
+        
+        .btn-dark:hover {
+            background-color: white;
+        }
+      
+        /* Footer Section */
+        footer {
+            background-color: orchid;
+            color: black;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: orchid;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: black;
+            padding-left: 5px;
+        }
+        
+        .footer-column p {
+            color: black;
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: black;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color:orchid;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: black;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .footer-column {
+                flex: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .about-section {
+            padding: 100px 0 50px;
+            background-color: #f9f9f9;
+        }
+        
+        .about-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .about-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="k.logo.png" alt="Lyn's Karate Academy" height="80" width="80">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQS.html">FAQs</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Opportunities.html">Opportunities</a></li>
+            </ul>
+            
+            <div class="buttons">
+                <a href="Testimonies.html" class="btn btn-white">Testimonies from Clients of Lyn's Academy</a>
+                <a href="login.html" class="btn btn-dark">Login</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h1>About Lyn's Karate Academy</h1>
+                <p>Welcome to Lyn's Karate Academy, a premier martial arts training center dedicated to empowering individuals through the transformative art of karate. Our mission is to provide a supportive, inclusive environment where students of all ages and abilities can develop physical strength, mental discipline, and self-confidence.</p>
+                
+                <h2>Our Philosophy</h2>
+                <p>We believe that karate is more than just a sport—it's a holistic approach to personal development. Our experienced instructors are committed to helping each student grow not just as a martial artist, but as a well-rounded individual.</p>
+                
+                <h2>What Sets Us Apart</h2>
+                <ul>
+                    <li>Specialized training programs for different age groups</li>
+                    <li>Focus on self-defense, fitness, and personal growth</li>
+                    <li>Inclusive environment welcoming all skill levels</li>
+                    <li>Expert instructors with years of experience</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="karate acheivement jpeg.jpg" alt="Lyn's Karate Academy Training">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Lyn's Karate Academy</h3>
+                    <p>Lyn's Karate Academy is a unique martial arts training center dedicated to empowering individuals of all ages through the art of karate. We provide a safe, supportive environment where students build confidence, discipline, and physical fitness while learning essential self-defense skills.</p>
+                    <a href="About Us.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Events</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="FAQS.html">FAQs</a></li>
+                        <li><a href="Contact Us.html">Contact Us</a></li>
+                        <li><a href="Opportunities.html">Opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Training classes for toddlers from 5 years to 10 years</a></li>
+                        <li><a href="#">Training Classes for teenagers from 11 years to 19 years</a></li>
+                        <li><a href="#">Training Classes for pregnant women from 4 months to 9 months</a></li>
+                        <li><a href="#">Lifeskills training</a></li>
+                        <li><a href="#">Karate job opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ntinda - Kisasi Road (Kalinabiri)</p>
+                    <p><i class="fas fa-phone"></i> +256760746109/742324441</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lyn's Karate Academy. All rights reserved. | <a href="privacy.html" style="color: black;">Privacy Policy</a> | <a href="terms.html" style="color:black;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript to toggle FAQs -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.classList.remove('active');
+                } else {
+                    answer.style.display = 'block';
+                    toggle.classList.add('active');
+                }
+            });
+        });
+
+        // Member button functionality
+        document.getElementById('memberButton')?.addEventListener('click', function() {
+            window.location.href = 'membership.html';
+        });
+    </script>
+</body>
+</html>

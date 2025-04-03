@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         /* Reset and base styles */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: orchid;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 35px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e5f2e9;
+        }
+        
+        .buttons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: orchid;
+            border: 1px solid white;
+        }
+        
+        .btn-white:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .btn-dark {
+            background-color: #000;
+            color: white;
+            border: 1px solid #000;
+        }
+        
+        .btn-dark:hover {
+            background-color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Childen\ with\ media\ jpg.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn-green {
+            background-color:orchid;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-green:hover {
+            background-color: orchid;
+        }
+        
+        /* Contact Container Styling */
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-detail:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            color: orchid;
+            font-size: 24px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-text {
+            color: #333;
+        }
+
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: orchid;
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: orchid;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .submit-btn:hover {
+            background-color: #d15eba;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer Section */
+        footer {
+            background-color: orchid;
+            color: black;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: orchid;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: black;
+            padding-left: 5px;
+        }
+        
+        .footer-column p {
+            color: black;
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: black;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color:orchid;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: black;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .footer-column {
+                flex: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .read-more {
+            color: orchid;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .read-more i {
+            margin-left: 10px;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    
+                </a>
+            </div>
+            <img src="k.logo.png" alt="Lyn's Karate Academy" height="80px", width="80px">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./About Us.html">About Us</a></li>
+                <li><a href="./FAQS.html">FAQs</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+            
+            <div class="buttons">
+                <a href="Testimonies.html" class="btn btn-white"> Testimonies from Clients of Lyn's Academy</a>
+                <a href="login.html" class="btn btn-dark">Login</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CONTACT US </h1>
+            <p>GET IN TOUCH WITH US</p>
+            <button class="btn-green" id="connectButton">CLICK TO CONNECT</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1 style="text-align: center; color: orchid; margin-bottom: 30px;">Contact Us</h1>
+        
+        <div class="contact-info">
+            <h2 style="color: orchid; margin-bottom: 20px;">Get in Touch</h2>
+            <p style="margin-bottom: 25px;">Have questions or ready to start your karate journey? Reach out to us using any of the methods below:</p>
+            
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <div class="contact-text">
+                    <h3>Location</h3>
+                    <p>Ntinda - Kisasi Road (Kalinabiri)</p>
+                </div>
+            </div>
+            
+            <div class="contact-detail">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-text">
+                    <h3>Phone</h3>
+                    <p>+256760746109 / 742324441</p>
+                </div>
+            </div>
+            
+            <div class="contact-detail">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div class="contact-text">
+                    <h3>Email</h3>
+                    <p>info@lynskarateacademy.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-detail">
+                <i class="fas fa-clock contact-icon"></i>
+                <div class="contact-text">
+                    <h3>Working Hours</h3>
+                    <p>Monday to Friday: 9am - 5pm</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2 style="color: orchid; margin-bottom: 20px;">Send Us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Lyn's Karate Academy</h3>
+                    <p>Lyn's Karate Academy is a unique martial arts training center dedicated to empowering individuals of all ages through the art of karate. We provide a safe, supportive environment where students build confidence, discipline, and physical fitness while learning essential self-defense skills.</p>
+                    <a href="./About Us.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Events</h3>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="./Opportunities.html">Opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Training classes for toddlers from 5 years to 10 years</a></li>
+                        <li><a href="#">Training Classes for teenagers from 11 years to 19 years</a></li>
+                        <li><a href="#">Training Classes for pregnant women from 4 months to 9 months</a></li>
+                        <li><a href="#">Lifeskills training</a></li>
+                        <li><a href="#">Karate job opportunities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>Ntinda - Kisasi Road (Kalinabiri)</p>
+                    <p><i class="fas fa-phone"></i> +256760746109/742324441</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lyn's Karate Academy. All rights reserved. | <a href="privacy.html" style="color: black;">Privacy Policy</a> | <a href="terms.html" style="color:black;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Member button functionality
+        document.getElementById('memberButton').addEventListener('click', function() {
+            window.location.href = 'membership.html';
+        });
+    </script>
+</body>
+</html>
